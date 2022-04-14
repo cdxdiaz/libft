@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 12:43:18 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/04/14 12:45:44 by wsawatwa         ###   ########.fr       */
+/*   Created: 2022/04/11 13:33:11 by wsawatwa          #+#    #+#             */
+/*   Updated: 2022/04/14 12:53:35 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+
+int	ft_isalnum(int c)
 {
-	if (c >= 40 && c <= 126)
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }
