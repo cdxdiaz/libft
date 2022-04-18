@@ -1,12 +1,31 @@
 #include <stdio.h>
+#include <string.h>
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
+
+
+void    *ft_memset(void *b, int c, size_t len)
+{
+	size_t  i = 0;
+
+	while (i < len)
+	{
+		((char *)b)[i] = c;
+		i++;
+	}
+
+	return (b);
+
+}
 
 int	main(void)
 {
-	char c = 'a';
+	char buffer[10];
+
+	ft_memset(buffer, 'a', 5);
 	
-	printf("return's %d", ft_isalnum(c));
+	for (int i = 0; i < 10; i++)
+		printf("%c", buffer[i]);
+	printf("\n");
+	
+	return(0);
 }

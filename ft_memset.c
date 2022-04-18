@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 01:13:36 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/04/18 02:26:07 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/04/18 09:53:27 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*p;
 	size_t	i;
 
-	p = b;
 	i = 0;
 	while (i < len)
 	{
-		p[i] = c;
+		((char *)b)[i] = c;
 		i++;
 	}
 	return (b);
