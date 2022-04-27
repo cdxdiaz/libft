@@ -1,31 +1,66 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-
-
-void    *ft_memset(void *b, int c, size_t len)
+size_t  ft_strlen(const char *s)
 {
-	size_t  i = 0;
-
-	while (i < len)
-	{
-		((char *)b)[i] = c;
+	size_t  i;
+	
+	i = 0;
+	while (s[i] != 0)
 		i++;
-	}
-
-	return (b);
-
+	return (i);
 }
 
-int	main(void)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	char buffer[10];
+	unsigned int	i;
+	
+	i = 0;
+	while (src[i] != 0  && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(src));
+}
 
-	ft_memset(buffer, 'a', 5);
-	
-	for (int i = 0; i < 10; i++)
-		printf("%c", buffer[i]);
-	printf("\n");
-	
-	return(0);
+size_t	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	size_t	i;
+	size_t len_dest;
+
+	i = 0;
+	len_dest = ft_strlen(dest);
+	while (src[i] != 0 && len_dest < size - 1)
+	{
+		dest[len_dest] = src[i];
+		len_dest++;
+		i++;
+	}
+	dest[ft_strlen(dest) +i] = 0;
+	if (size > ft_strlen(dest))
+		return (ft_strlen(src) + ft_strlen(dest));
+	return (ft_strlen(src) + size);
+}
+
+int main()
+{
+	char	dest[50];
+	char	*src;
+	int	size;
+
+	src = "hello the world";
+	size = 40;
+	printf("ft_strlcpy %u\n", ft_strlcpy(dest, src, size));
+	printf("%s\n", dest);
+	printf("strlcpy %lu\n", strlcpy(dest, src, size));
+	printf("%s\n\n", dest);
+	printf("ft_strlcat %zu\n", ft_strlcat(dest, src, size));
+	printf("%s\n", dest);
+	printf("strlcat %lu\n", strlcat(dest, src, size));
+	printf("%s\n", dest);
+
+	return 0;
 }
