@@ -51,7 +51,7 @@ int main()
 	int	size;
 
 	src = "hello the world";
-	size = 40;
+	size = 5;
 	printf("ft_strlcpy %u\n", ft_strlcpy(dest, src, size));
 	printf("%s\n", dest);
 	printf("strlcpy %lu\n", strlcpy(dest, src, size));
