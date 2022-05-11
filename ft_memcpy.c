@@ -6,11 +6,11 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 20:00:48 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/04/24 20:04:43 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/11 09:54:51 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

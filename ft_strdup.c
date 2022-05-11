@@ -6,11 +6,11 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 07:13:00 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/10 09:21:53 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/11 09:57:11 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strdup(char *s1)
 {

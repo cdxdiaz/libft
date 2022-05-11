@@ -6,11 +6,11 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 19:55:40 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/07 20:17:36 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/11 09:16:25 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

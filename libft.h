@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 12:55:11 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 07:09:05 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/11 07:28:20 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int	ft_lstsize(t_list *lst);
 void	*ft_memchr(const void *s, int c, size_t n);
-int	ft_memcmp(conts void *s1, const void *s2, size_t n);
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-void	*ft_memmove(void *dst, const *src, size_t len);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
