@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 20:10:03 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 11:12:34 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/11 16:59:19 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
-	size_t	i;
+	size_t	src_len;
 
-	i = 0;
-	while (src[i] != 0 && i < dstsize - 1)
+	src_len = ft_strlen(src);
+	if (src_len < dstsize)
+		ft_memcpy(dest, src, src_len + 1);
+	else if (dstsize)
 	{
-		dest[i] = src[i];
-		i++;
+		ft_memcpy(dest, src, dstsize - 1);
+		dest[dstsize - 1] = 0;
 	}
-	dest[i] = 0;
 	return (ft_strlen(src));
 }
