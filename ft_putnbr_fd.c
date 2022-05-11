@@ -6,11 +6,11 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:23:46 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 10:24:13 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/11 10:42:52 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
