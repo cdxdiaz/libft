@@ -6,9 +6,24 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 12:55:11 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/10 12:59:26 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/11 07:09:05 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
+
+typedef struct	s_list
+{
+	void	*content;
+	size_t	content_size;
+	struct s_list	*next;
+}		t_list;
+
+
 
 int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -53,3 +68,5 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
+
+#endif
