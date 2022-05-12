@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:09:41 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 10:10:00 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/12 13:15:12 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,25 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*temp;
+	size_t	i;
+	size_t	j;
 
+	i = 0;
+	j = 0;
+	temp = (char *)malloc(sizeof(temp) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (temp == 0)
+		return (0);
+	while (s1[i] != 0)
+	{
+		temp[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != 0)
+	{
+		temp[i + j] = s2[j];
+		j++;
+	}
+	temp[i + j] = 0;
+	return (temp);
 }
