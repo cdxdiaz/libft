@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:15:50 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 10:37:28 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/19 06:57:12 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,13 @@
 
 char	*ft_itoa(int c)
 {
+	char	*str;
+
+	if ((str = (char *)malloc(sizeof(char) * 2) == 0)
+		return (0);
+	if (c == -2147483648)
+		return (ft_strcpy(str, "-2147483648");
+	
+
 }
+
