@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:22:57 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 10:23:22 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:44:21 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
