@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 12:55:11 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 11:20:14 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/25 03:13:39 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void	*content;
-	size_t	content_size;
+	void		*content;
 	struct s_list	*next;
-}		t_list;
-
-
+}			t_list;
 
 int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -57,8 +54,8 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strlcat(char *restrict dst, const char * restrict src, size_t dstsize);
-size_t	ft_strlcpy(char *restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
