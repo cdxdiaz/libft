@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:11:47 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/25 02:47:11 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/26 22:33:41 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,31 @@
 
 static int	num_words(char const *s, char c)
 {
-	size_t	n;
+	unsigned int	is_word;
+	unsigned int	i;
 
-	n = 0;
+	is_word = 0;
+	i = 0;
 	while (*s)
 	{
-		while (*s == c)
-			s++;
-		if (*s != 0)
-			n++;
-		while (*s && *s != c)
-			s++;
+		if (is_word == 0 && *s != c)
+		{
+			is_word = 1;
+			i++;
+		}
+		else if (is_word == 1 && *s == c)
+			is_word = 0;
+		s++;
 	}
-	return (n);
+	return (i);
 }
 
-static int	len_words(char const *s, char c, size_t i)
+static int	len_words(char const *s, char c, unsigned int i)
 {
-	size_t	len;
+	unsigned int	len;
 
 	len = 0;
-	while (*(s + i) != c)
+	while (s[i] != c && s[i] != 0)
 	{
 		i++;
 		len++;
@@ -44,7 +48,7 @@ static int	len_words(char const *s, char c, size_t i)
 
 static char	**free_all(char **s)
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i])
@@ -67,7 +71,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	num = num_words(s, c);
-	tab = (char **)malloc(sizeof(char *) * num + 1);
+	tab = (char **)malloc(sizeof(char *) * (num + 1));
 	if (!tab)
 		return (0);
 	while (j < num)
@@ -77,7 +81,7 @@ char	**ft_split(char const *s, char c)
 		len = len_words(s, c, i);
 		tab[j] = ft_substr(s, i, len);
 		if (!tab[j])
-			return (free_all(tab));
+			return (0);
 		i += len;
 		j++;
 	}
