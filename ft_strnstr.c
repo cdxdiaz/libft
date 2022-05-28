@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:07:14 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/28 19:49:11 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/28 21:39:45 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t len_needle;
+	size_t	len_needle;
 
 	i = 0;
 	len_needle = ft_strlen(needle);
