@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:15:50 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/28 23:31:32 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/28 23:38:46 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,9 @@ char	*ft_itoa(int c)
 	size_t	len;
 
 	len = ft_len(c);
-	str = (char *)malloc(sizeof(char) * len + 1);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (0);
-	str[len--] = 0;
 	if (c == -2147483648)
 		return (ft_memcpy(str, "-2147483648", 11));
 	if (c < 0)
@@ -52,5 +51,6 @@ char	*ft_itoa(int c)
 		str[0] = c + 48;
 		str[1] = 0;
 	}
+	str[len + 1] = 0;
 	return (str);
 }
