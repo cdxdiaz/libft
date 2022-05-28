@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:15:50 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/28 20:28:37 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/28 22:36:32 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_len(int c)
 {
-	int len;
+	size_t	len;
 
 	len = 0;
 	if (c <= 0)
@@ -30,7 +30,7 @@ static int	ft_len(int c)
 char	*ft_itoa(int c)
 {
 	char	*str;
-	long int	len;
+	size_t	len;
 
 	len = ft_len(c);
 	str = (char *)malloc(sizeof(char) * len + 1);
