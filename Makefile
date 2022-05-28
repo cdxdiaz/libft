@@ -6,7 +6,7 @@
 #    By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/11 11:19:51 by wsawatwa          #+#    #+#              #
-#    Updated: 2022/05/28 14:31:25 by wsawatwa         ###   ########.fr        #
+#    Updated: 2022/05/29 01:23:48 by wsawatwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRC = ft_atoi.c \
 	ft_split.c \
 	ft_tolower.c \
 	ft_toupper.c \
-	ft_lstdelone.c \
+
+SRCB =	ft_lstdelone.c \
 	ft_lstiter.c \
 	ft_lstnew.c \
 	ft_lstmap.c \
@@ -57,9 +58,10 @@ SRC = ft_atoi.c \
 	ft_lstclear.c \
 	ft_lstlast.c \
 	ft_lstsize.c \
-
+	$(SRC)
 
 OBJ = $(SRC:%.c=%.o)
+OBJB = $(SRCB:%.c=%.o)
 
 all: $(NAME)
 
@@ -74,6 +76,7 @@ $(NAME): $(OBJ)
 
 clean:
 		@rm -f $(OBJ)
+		@rm -f $(OBJB)
 		@echo "OBJ deleted"
 
 fclean: clean
@@ -81,5 +84,11 @@ fclean: clean
 		@echo "$(NAME) deleted"
 
 re: fclean all
+
+bonus: $(OBJB)
+		@ar rc $(NAME) $(OBJB)
+		@echo "$(NAME) created"
+		@ranlib $(NAME)
+		@echo "$(NAME) indexed"
 
 .PHONY: all, clean, fclean, re
