@@ -6,19 +6,37 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:15:50 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/20 16:49:12 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/28 20:28:37 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_len(int c)
+{
+	int len;
+
+	len = 0;
+	if (c <= 0)
+		len = 1;
+	while (c != 0)
+	{
+		c = c / 10;
+		len++;
+	}
+	return (len);
+}
+
 char	*ft_itoa(int c)
 {
 	char	*str;
+	long int	len;
 
-	str = (char *)malloc(sizeof(char) * 2);
+	len = ft_len(c);
+	str = (char *)malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (0);
+	str[len--] = 0;
 	if (c == -2147483648)
 		return (ft_memcpy(str, "-2147483648", 11));
 	if (c < 0)
