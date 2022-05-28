@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:26:55 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 10:27:12 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/28 11:34:03 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
+	size_t	size;
 
+	size = 0;
+	while (lst != 0)
+	{
+		lst = lst->next;
+		size++;
+	}
+	return (size);
 }
