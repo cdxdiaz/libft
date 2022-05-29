@@ -6,7 +6,7 @@
 /*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:11:47 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/29 00:51:18 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/05/29 23:26:37 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	len_words(char const *s, char c, unsigned int i)
 	return (len);
 }
 
-static char	**free_all(char **s)
+/*static char	**free_all(char **s)
 {
 	unsigned int	i;
 
@@ -58,7 +58,7 @@ static char	**free_all(char **s)
 	}
 	free(s);
 	return (0);
-}
+}*/
 
 char	**ft_split(char const *s, char c)
 {

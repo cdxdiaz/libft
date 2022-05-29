@@ -6,11 +6,11 @@
 #    By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/11 11:19:51 by wsawatwa          #+#    #+#              #
-#    Updated: 2022/05/29 01:23:48 by wsawatwa         ###   ########.fr        #
+#    Updated: 2022/05/29 23:50:38 by wsawatwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-G = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror
 
 NAME = libft.a
 
