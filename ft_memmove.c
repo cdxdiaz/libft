@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wsawatwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wsawatwa <wenai.sawatwathin@gmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 02:23:21 by wsawatwa          #+#    #+#             */
-/*   Updated: 2022/05/11 09:55:46 by wsawatwa         ###   ########.fr       */
+/*   Updated: 2022/06/03 16:42:33 by wsawatwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-
-	i = 0;
 	if (dst > src)
 	{
 		while (len--)
